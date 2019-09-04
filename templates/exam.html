@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="mbr-section form1 cid-rAw8bCJORZ" id="form1-y">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+              <div><p>{{q}}</p></div>
+                <!---Formbuilder Form--->
+                <form method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="dViuNvt6/CbrDw701OpTpBpAl0BW0Jm2asy882PMzoHlz3GwOozgGeQj03LFptovFHt9lMCkJKoKRvfsDKqbhsPLdij1HXlIb1DcNFvWyO5ATWhRUR4fB1cvfn+RBUSe">
+                
+                {% csrf_token %}
+                {{ form.as_p}}
+
+                    <div class="col-md-12 input-group-btn align-center">   
+                        <button type="submit" class="btn btn-form btn-primary-outline display-4" value="PREV" name="action">
+                            <span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>prev</button>
+                        <button type="submit" class="btn btn-form btn-primary-outline display-4" value="NEXT" name="action">
+                            <span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>next</button>
+                    </div>
+                </form><!---Formbuilder Form--->
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

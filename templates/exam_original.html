@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+   <style>
+	li {
+		list-style-type: none;
+		}
+</style>
+</head>
+
+
+<body>
+
+<div><p>{{q}}</p></div>
+
+
+<div class="control">
+  <form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    
+  <button type="submit" value="NEXT" name="NEXT" > NEXT</button>
+  <button type="submit" value="PREV" name="PREV"> PREV</button>
+  </form>
+</div>
+
+
+</body>
+</html>

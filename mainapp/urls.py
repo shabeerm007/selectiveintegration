@@ -1,0 +1,11 @@
+from django.urls import path
+from mainapp.views import home_view,test_view,contact_view,TestView
+from mainapp.tests import unittest
+
+urlpatterns = [
+	path('',home_view,name='home'),
+	path('tests',test_view,name='testpage'),
+	path('contact',contact_view,name='contactpage'),
+	path('exam', TestView.as_view(), name='examview'),
+	#path('unittest', unittest, name='unittest'),
+]
