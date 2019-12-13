@@ -14,16 +14,16 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=x*q#x==c31xbepsdq%!k-xx8xv*rs#6i2^te30k2h6-&j3$me'
+SECRET_KEY = '=x*q#x=NOTVALID=c31xbepsdq%!k-xx8xv*rs#6i2^te30k2h6-&j3$me'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp.apps.MainappConfig'
+    'mainapp.apps.MainappConfig',
+    'myaccount.apps.MyaccountConfig'
 ]
 
 MIDDLEWARE = [
@@ -75,19 +76,19 @@ WSGI_APPLICATION = 'integration.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    
     #'default': {
-    #    'ENGINE':'django.db.backends.postgresql',
-    #    'NAME':'selectivedb',
-    #    'USER':'selectiveuser',
-    #    'PASSWORD':'pg123',
-    #    'Host':'127.0.0.1',
-    #    'PORT':'5432'
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
+    
+    'default': {
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME':'selectivedb',
+        'USER':'selectiveuser',
+        'PASSWORD':'pg123',
+        'Host':'127.0.0.1',
+        'PORT':'5432'
+    }
 }
 
 
@@ -127,12 +128,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATIC_ROOT = f"{BASE_DIR}//static"
 STATIC_URL = '/static/'
-
-#STATIC_ROOT = BASE_DIR
-
-STATIC_ROOT = [os.path.join(BASE_DIR,'static')]
 #STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 LOGIN_REDIRECT_URL = '/'
+
+
+#Email Setup
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='selectivetestsmail@gmail.com'
+EMAIL_HOST_PASSWORD='password'
+EMAIL_USE_TLS=True
 

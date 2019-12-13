@@ -4,10 +4,9 @@ from mainapp.tests import unittest
 
 urlpatterns = [
 	path('',home_view,name='home'),
-	path('tests',test_view,name='testpage'),
-	path('contact',contact_view,name='contactpage'),
-	path('exam', ExamView.as_view(), name='examview'),
-        path('result', resultview, name='result'),
-        #path('exam', TestView.as_view(), name='examview'),
-	#path('unittest', unittest, name='unittest'),
+	path('tests',test_view,name='tests'),
+	path('contact',contact_view,name='contact'),
+	path('exam', ExamView.as_view(), name='exam'),
+    path('result', resultview, name='result'),
+	path('unittest', unittest, name='unittest'), #activate to pupulate the database.
 ]
