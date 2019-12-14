@@ -1,0 +1,15 @@
+;File Location - /etc/systemd/system/uwsgi.service 
+;-----------------
+[Unit]
+Description=uWSGI Emperor Service
+
+[Service]
+ExecStartPre=/usr/bin/bash -c 'mkdir -p /run/uwsgi; chown shabeerm007:nginx /run/uwsgi'
+ExecStart=/usr/local/bin/uwsgi --emperor /etc/uwsgi/sites
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
