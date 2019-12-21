@@ -102,8 +102,7 @@ class ContactView(TemplateView):
 
 	def get(self,request):
 		form = ContactForm()
-		#return render(request,contactpage, {'form':form})
-		return render(request,'myaccounts/login.html')
+		return render(request,contactpage, {'form':form})
 
 	def post(self,request):
 		form = ContactForm(request.POST)
