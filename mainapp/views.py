@@ -2,13 +2,15 @@ from django.shortcuts import *
 from django.http import HttpResponse
 from .models import Maths,English, GeneralA
 from django.views.generic import TemplateView
-from .forms import *
-
+from .forms import ExamForm, ContactForm
+from django.core.mail import send_mail
 
 MAX_QUESTION = 3
 
 exampage = 'exam.html'
 resultpage = 'result.html'
+contactpage = 'contact.html'
+emailsentpage = 'emailsent.html'
 
 # Create your views here.
 def resultview(request,*args, **kwargs):
@@ -96,9 +98,28 @@ def test_view(request,*args, **kwargs):
 	return render(request,"tests.html")
 
 
-def contact_view(request,*args, **kwargs):
-	print("{}  : {}".format(request, request.user))
-	strng = "<H1> Main page of Trilane technologes </H1>"
-	#return HttpResponse(strng)
-	return render(request,"contact.html")
+class ContactView(TemplateView):
+
+	def get(self,request):
+		form = ContactForm()
+		#return render(request,contactpage, {'form':form})
+		return render(request,'myaccounts/login.html')
+
+	def post(self,request):
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			user_name = form.cleaned_data['name']
+			user_email = form.cleaned_data['email']
+			user_phone = form.cleaned_data['phone']
+			user_sub = form.cleaned_data['subject']
+			user_message = form.cleaned_data['message']
+			email_body = f'''\nname  	: {user_name}  \nEmail_id	: {user_email}\nphone 	: {user_phone} 
+							\n-----Message-------- \n{user_message}\n'''
+			selective_email = 'selectivetestsmail@gmail.com'
+			send_mail(user_sub,email_body,selective_email,[selective_email,])
+			return render(request,emailsentpage)
+
+		#Form has errors. Display the form again.	
+		return render(request,contactpage, {'form':form})
+
 

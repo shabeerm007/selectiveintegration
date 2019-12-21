@@ -1,2 +1,4 @@
 infra
 */migrations/*
+*.pyc
+

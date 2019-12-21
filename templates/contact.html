@@ -1,56 +1,41 @@
+
 {% extends 'base.html' %}
 {% block content %}
 
-
 <section class="mbr-section form1 cid-rAw8bCJORZ" id="form1-y">
 
-    
+<div class="container">
+<div class="row justify-content-center">
+<div class="title col-12 col-lg-8">
+<h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-5">CONTACT FORM</h1>
+<h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-7">
+Fill in your details - name, contact number, email id and your query. We will get back to you in 2 business days.</h3>
+</div>
+</div>
+</div>
 
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="title col-12 col-lg-8">
-                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-7">
-                    CONTACT FORM
-                </h2>
-                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-7">
-                    Fill in your details - name, contact number, email id and the prefered login name. We will send you the login details.</h3>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="media-container-column col-lg-8" data-form-type="formoid">
-                <!---Formbuilder Form--->
-                <form action="https://mobirise.com/" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="dViuNvt6/CbrDw701OpTpBpAl0BW0Jm2asy882PMzoHlz3GwOozgGeQj03LFptovFHt9lMCkJKoKRvfsDKqbhsPLdij1HXlIb1DcNFvWyO5ATWhRUR4fB1cvfn+RBUSe">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                        </div>
-                    </div>
-                    <div class="dragArea row">
-                        <div class="col-md-4  form-group" data-for="name">
-                            <label for="name-form1-y" class="form-control-label mbr-fonts-style display-7">Name</label>
-                            <input type="text" name="name" data-form-field="Name" required="required" class="form-control display-7" id="name-form1-y">
-                        </div>
-                        <div class="col-md-4  form-group" data-for="email">
-                            <label for="email-form1-y" class="form-control-label mbr-fonts-style display-7">Email</label>
-                            <input type="email" name="email" data-form-field="Email" required="required" class="form-control display-7" id="email-form1-y">
-                        </div>
-                        <div data-for="phone" class="col-md-4  form-group">
-                            <label for="phone-form1-y" class="form-control-label mbr-fonts-style display-7">Phone</label>
-                            <input type="tel" name="phone" data-form-field="Phone" class="form-control display-7" id="phone-form1-y">
-                        </div>
-                        <div data-for="message" class="col-md-12 form-group">
-                            <label for="message-form1-y" class="form-control-label mbr-fonts-style display-7">Message</label>
-                            <textarea name="message" data-form-field="Message" class="form-control display-7" id="message-form1-y"></textarea>
-                        </div>
-                        <div class="col-md-12 input-group-btn align-center"><button type="submit" class="btn btn-form btn-primary-outline display-4"><span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>Send&nbsp;</button></div>
-                    </div>
-                </form><!---Formbuilder Form--->
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="title col-12 col-lg-8">
+<div class="col-md-12 input-group-btn align-left">
+
+	<!---Formbuilder Form--->
+	<form method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="Signup" data-form-email="true"value="dViuNvt6/CbrDw701OpTpBpAl0BW0Jm2asy882PMzoHlz3GwOozgGeQj03LFptovFHt9lMCkJKoKRvfsDKqbhsPLdij1HXlIb1DcNFvWyO5ATWhRUR4fB1ContactForm">  
+	{% csrf_token %}
+	<table >
+	{{ form.as_table }}
+	</table>
+	<div class="col-md-12 input-group-btn align-center">
+	<button type="submit" class="btn btn-form btn-primary-outline display-4">
+	<span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>send</button>
+	</div>
+	</form><!---Formbuilder Form--->
+
+</div>
+</div>
+</div>
+</div>
+
 </section>
 
 {% endblock %}
