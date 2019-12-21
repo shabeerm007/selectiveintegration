@@ -13,7 +13,7 @@
 	<!---Formbuilder Form--->
 	<form method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="Signup" data-form-email="true" value="dViuNvt6/CbrDw701OpTpBpAl0BW0Jm2asy882PMzoHlz3GwOozgGeQj03LFptovFHt9lMCkJKoKRvfsDKqbhsPLdij1HXlIb1DcNFvWyO5ATWhRUR4fB1signup">  
 	{% csrf_token %}
-	{{ form.as_ul }}
+	<table border ='1'>{{ form.as_table }}</table>
 	<div class="col-md-12 input-group-btn align-center">
 	<button type="submit" class="btn btn-form btn-primary-outline display-4">
 	<span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>signup</button>
