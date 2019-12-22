@@ -1,4 +1,4 @@
 infra
 */migrations/*
 *.pyc
-
+integration/settings.py
