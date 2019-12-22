@@ -109,7 +109,7 @@ class ContactView(TemplateView):
 			user_phone = form.cleaned_data['phone']
 			user_sub = form.cleaned_data['subject']
 			user_message = form.cleaned_data['message']
-			email_body = f'''\nname  	: {user_name}  \nEmail_id	: {user_email}\nphone 	: {user_phone} 
+			email_body = f'''\nname		: {user_name}  \nEmail_id	: {user_email}\nphone		: {user_phone}
 							\n-----Message-------- \n{user_message}\n'''
 			selective_email = 'selectivetestsmail@gmail.com'
 			send_mail(user_sub,email_body,selective_email,[selective_email,])
