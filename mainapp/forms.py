@@ -11,7 +11,7 @@ class ExamForm(forms.Form):
       choicelist = kwargs.pop('choices')
     else:
       #We should reach this section when only to validate the form
-      choicelist=[]
+      choicelist=None
     super().__init__(*args, **kwargs)
     self.fields['selectedchoice'] = forms.CharField(label ='',widget=forms.RadioSelect(choices=choicelist))
 

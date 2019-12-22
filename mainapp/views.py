@@ -1,5 +1,4 @@
-from django.shortcuts import *
-from django.http import HttpResponse
+from django.shortcuts import  render,redirect
 from .models import Maths,English, GeneralA
 from django.views.generic import TemplateView
 from .forms import ExamForm, ContactForm
@@ -25,11 +24,11 @@ def resultview(request,*args, **kwargs):
 class ExamView(TemplateView):
 	'''
 	Use session variable request.session to store the below values.
-		1. Current Question number
-		2. Dictionary of the question number and correct answer
-		3. Dictionary of the question number and user selected answer
-		4. Real time Score
-		5. qset - start and end question numbers from teh question bank for this test.
+		1. Current Question number - qnum.
+		2. Dictionary of the question number and correct answer - selected_ans.
+		3. Dictionary of the question number and user selected answer - correct_ans.
+		4. Real time Score - score
+		5. tuple with start and end question numbers from the question bank for this test - qset.
 	'''
 
 	def renderthequestion(self, request):
@@ -88,13 +87,11 @@ class ExamView(TemplateView):
 def home_view(request,*args, **kwargs):
 	print("{}  : {}".format(request, request.user))
 	strng = "<H1> Main page of Trilane technologes </H1>"
-	#return HttpResponse(strng)
 	return render(request,"home.html")
 
 def test_view(request,*args, **kwargs):
 	print("{}  : {}".format(request, request.user))
 	strng = "<H1> Main page of Trilane technologes </H1>"
-	#return HttpResponse(strng)
 	return render(request,"tests.html")
 
 
