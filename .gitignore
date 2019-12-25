@@ -1,4 +1,6 @@
-infra
-*/migrations/*
+.DS_Store
 *.pyc
+infra
 integration/settings.py
+*/migrations/*
+bkpdir/*

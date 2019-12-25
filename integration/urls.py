@@ -21,5 +21,6 @@ urlpatterns = [
     #path('admin/', admin.site.urls),
     path('',include('mainapp.urls')),
     path('accounts/',include('myaccount.urls')),
+    path('qbank/',include('qbankapp.urls')),
     
 ]
