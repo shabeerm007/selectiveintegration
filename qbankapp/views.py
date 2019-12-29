@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.http.response import HttpResponse,HttpResponseNotFound
 from django.views.generic import TemplateView, ListView
 from django.views.generic.edit import CreateView, UpdateView
-from .forms import MathsForm, EnglishForm, GeneralAForm
 from mainapp.models import Maths,English,GeneralA
 import os
 import pandas as pd

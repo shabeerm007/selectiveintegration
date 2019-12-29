@@ -13,11 +13,11 @@
                     <div class="col-md-12 input-group-btn align-left">
                         <ol>
                         {% for que_elem in object_list %}
-                        <li value="{{que_elem.pk}}">{{ que_elem.que }}</li>
+                        <li value="{{que_elem.pk}}">{{ que_elem.que|escape|linebreaks }}</li>
                         <div> A:{{ que_elem.ch1 }} &nbsp;&nbsp;B:{{ que_elem.ch2 }} &nbsp;&nbsp;C:{{ que_elem.ch3 }} &nbsp;&nbsp; D:{{ que_elem.ch4 }} <br> Answer:{{que_elem.ans}} <br><br>
                         <p>
                         <u>Working Out</u> <br>
-                        {{ que_elem.wor }}<br>
+                        {{ que_elem.wor|escape|linebreaks }}<br>
                         Validated : {{ que_elem.valid }}
                         </p>
                         </div>
