@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<section class="mbr-fullscreen form1 cid-rAw8bCJORZ" id="form1-y">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-7">
+                    General Ability
+                </h1>
+                    <div class="col-md-12 input-group-btn align-left">
+					<form method="POST">
+					<table>
+					{% csrf_token %}
+					{{form.as_table}}
+					</table>
+					<button type="submit" name="subject" value="{{sub}}">Submit</button>
+					</form>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Maths(models.Model):
 	que 	= models.TextField(max_length=5*1024) 				#Question
@@ -11,7 +12,7 @@ class Maths(models.Model):
 	valid 	= models.BooleanField()				#Vallid question or not
 	
 	def __str__(self):
-		return f" Maths: Question Number - {self.pk}"
+		return f"Maths: Question Number - {self.pk}"
 
 	def to_dict(self):
 		return {'Qnum': self.pk,
@@ -22,7 +23,11 @@ class Maths(models.Model):
 				'Choice 4':self.ch4,
 				'Answer'  :self.ans,
 				'Solution':self.wor,
-				'Validated':self.valid}
+				'Validated':self.valid }
+
+	
+	def get_absolute_url(self):
+		return reverse('list-maths') 			#Lists all contents of the table
 
 
 class English(models.Model):
@@ -36,7 +41,7 @@ class English(models.Model):
 	valid 	= models.BooleanField()				#Vallid question or not
 
 	def __str__(self):
-		return f" English: Question Number - {self.pk}"
+		return f"English: Question Number - {self.pk}"
 
 	def to_dict(self):
 		return {'Qnum': self.pk,
@@ -48,6 +53,9 @@ class English(models.Model):
 				'Answer'  :self.ans,
 				'Solution':self.wor,
 				'Validated':self.valid}
+
+	def get_absolute_url(self):
+		return reverse('list-eng') 				#Lists all contents of the table
 
 class GeneralA(models.Model):
 	que = models.TextField(max_length=5*1024) 					#Question
@@ -60,7 +68,7 @@ class GeneralA(models.Model):
 	valid 	= models.BooleanField()				#Vallid question or not
 
 	def __str__(self):
-		return f" GeneralA: Question Number - {self.pk}"
+		return f"GeneralA: Question Number - {self.pk}"
 
 	def to_dict(self):
 		return {'Qnum': self.pk,
@@ -72,3 +80,8 @@ class GeneralA(models.Model):
 				'Answer'  :self.ans,
 				'Solution':self.wor,
 				'Validated':self.valid}
+
+	def get_absolute_url(self):
+		return reverse('list-ga') 				#Lists all contents of the table
+
+

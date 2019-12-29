@@ -38,10 +38,10 @@ class ExamView(TemplateView):
 		request.session['correct_ans'][request.session['qnum']]  = qelem.ans
 
 		#render the choices using the form class
-		options = [ ('choice1', qelem.ch1),
-                        ('choice2', qelem.ch2),
-                        ('choice3', qelem.ch3),
-                        ('choice4', qelem.ch4),
+		options = [ ('A', qelem.ch1),
+                        ('B', qelem.ch2),
+                        ('C', qelem.ch3),
+                        ('D', qelem.ch4),
                         ]
 		form = ExamForm(choices = options)
 		qstring = f"{request.session['qnum']}.	{qelem.que}" #qstring = Question number + Question
