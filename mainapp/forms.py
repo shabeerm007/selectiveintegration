@@ -21,7 +21,7 @@ class ContactForm(forms.Form):
     self.fields['name']= forms.CharField(label='Name', max_length =100)
     self.fields['email'] = forms.EmailField()
     self.fields['phone'] = forms.DecimalField(max_digits=10)
-    self.fields['subject'] = forms.CharField(label='subject', max_length =500)
+    self.fields['subject'] = forms.CharField(max_length =500)
     self.fields['message'] = forms.CharField(widget=forms.Textarea)
 
   def clean_phone(self):

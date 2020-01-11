@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
 
 <section class="mbr-section form1 cid-rAw8bCJORZ" id="form1-y">
+  <div class="container" id="countdowntime" align="right"></div>
     
     <div class="container">
         <div class="row justify-content-center">
@@ -14,19 +17,22 @@
                 {{ form.as_p}}
 
                     <div class="col-md-12 input-group-btn align-center">   
-			<!--
-                        <button type="submit" class="btn btn-form btn-primary-outline display-4" value="PREV" name="action">
+
+                        <button type="submit" class="btn btn-form btn-primary-outline display-4" value=0 name="next">
                             <span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>prev</button>
-			-->
-                        <button type="submit" class="btn btn-form btn-primary-outline display-4" value="NEXT" name="action">
+
+                        <button type="submit" class="btn btn-form btn-primary-outline display-4" value=1 name="next">
                             <span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>next</button>
                     </div>
                 </form><!---Formbuilder Form--->
-
+                <hr>
             </div>
         </div>
     </div>
 
 </section>
 
+<script id="timer" time-left="{{time}}" src='{% static "assets/selective/exam_html.js" %}'></script>
+
 {% endblock %}
+

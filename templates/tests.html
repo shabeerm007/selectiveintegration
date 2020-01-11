@@ -1,40 +1,36 @@
 {% extends 'base.html' %}
 {%block content %}
 
-<section class="section-table cid-rAvsSn4jIB" id="table1-l">
+<section id='selective' class="section-table cid-rAvsSn4jIB" id="table1-l">
   <div class="container container-table">
-    <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-4"><br>The Selective High School Placement Test is designed to measure ability through tests in reading, mathematics, general ability and writing.<br>The Selective High School Placement Test consists of a 20 minute writing test and three 40 minute multiple-choice tests in:<div><br></div><div>reading (45 questions)</div><div>mathematics (40 questions)</div><div>general ability (60 questions).</div><br><br><div>Students will be more comfortable with the test process if they are familiar with the format of the test, the types of questions and what the answer sheet looks like. Below tests are provided to help students become familiar with the test and to practise answering quickly.&nbsp;</div></h2>
-    <h3 id='maths' class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5"><u>Maths</u></h3>
+    <h2  class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5"><u>Selective</u></h2>
+    <p class="mbr-section-title mbr-fonts-style align-center pb-3 display-4">The Selective High School Placement Test is designed to measure ability through tests in reading, mathematics, general ability and writing.<br>The Selective High School Placement Test consists of a 20 minute writing test and three 40 minute multiple-choice tests in:<br><br>Reading (45 questions)<br>Mathematics (40 questions)<br>General ability (60 questions).<br><br>Students will be more comfortable with the test process if they are familiar with the format of the test, the types of questions and what the answer sheet looks like. Below tests are provided to help students become familiar with the test and to practise answering quickly.</p>
     {% if user.is_authenticated %}
       <div class="table-wrapper ">
       <div class="container scroll">
       <table class="table" cellspacing="0">
       <thead>
         <tr class="table-heads ">    
-          <th class="head-item mbr-fonts-style display-7">Selective</th>
-          <th class="head-item mbr-fonts-style display-7"></th>
+          <th class="head-item mbr-fonts-style display-7">Subject</th>
           <th class="head-item mbr-fonts-style display-7"></th>
           <th class="head-item mbr-fonts-style display-7"></th>
         </tr>
       </thead>
       <tbody>      
       <tr> 
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="{% url 'exam' %}?test=trial">Trial Test</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 1</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 2</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 3</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">Maths</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="{% url 'exam' %}?test=trial">trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="{% url 'exam' %}?test=assay">assay</a></td>
       </tr>
       <tr>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 4</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 5</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 6</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 7</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">English(Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">assay</a></td>
       </tr>
       <tr>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 8</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 9</a></td>
-        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">Test 10</a></td>
-        <td class="body-item mbr-fonts-style display-7"></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">General Ability(Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">assay</a></td>
       </tr>
       </tbody>
       </table>
@@ -46,31 +42,27 @@
     <table class="table" cellspacing="0">
     <thead>
     <tr class="table-heads ">    
-      <th class="head-item mbr-fonts-style display-7">Selective</th>
-      <th class="head-item mbr-fonts-style display-7"></th>
+      <th class="head-item mbr-fonts-style display-7">Subject</th>
       <th class="head-item mbr-fonts-style display-7"></th>
       <th class="head-item mbr-fonts-style display-7"></th>
     </tr>
     </thead>
     <tbody>      
-    <tr> 
-      <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="{% url 'exam' %}?test=trial">Trial Test</a></td>
-      <td class="body-item mbr-fonts-style display-7">Test 1</td>
-      <td class="body-item mbr-fonts-style display-7">Test 2</td>
-      <td class="body-item mbr-fonts-style display-7">Test 3</td>
-    </tr>
-    <tr>
-      <td class="body-item mbr-fonts-style display-7">Test 4</td>
-      <td class="body-item mbr-fonts-style display-7">Test 5</td>
-      <td class="body-item mbr-fonts-style display-7">Test 6</td>
-      <td class="body-item mbr-fonts-style display-7">Test 7</td>
-    </tr>
-    <tr>
-      <td class="body-item mbr-fonts-style display-7">Test 8</td>
-      <td class="body-item mbr-fonts-style display-7">Test 9</td>
-      <td class="body-item mbr-fonts-style display-7">Test 10</td>
-      <td class="body-item mbr-fonts-style display-7"></td>
-    </tr>
+      <tr> 
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">Maths</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="{% url 'exam' %}?test=trial">trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black" href ="#">assay</a></td>
+      </tr>
+      <tr>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">English (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black" href ="#">assay</a></td>
+      </tr>
+      <tr>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">General Ability (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black" href ="#">assay</a></td>
+      </tr>
     </tbody>
     </table>
     </div>
@@ -79,110 +71,77 @@
   </div>
 </section>
 
-<section class="section-table cid-rAwKO1blMc" id="table1-10">
 
+<section id='oc' class="section-table cid-rAvsSn4jIB" id="table1-l">
   <div class="container container-table">
-      
-      <h3 id='english' class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5"><u>English</u></h3>
-      <div class="table-wrapper">
-        <div class="container">
-          
-        </div>
-
-        <div class="container scroll">
-          <table class="table" cellspacing="0">
-            <thead>
-              <tr class="table-heads ">
-                  
-                  
-                  
-                  
-              <th class="head-item mbr-fonts-style display-7">Selective</th><th class="head-item mbr-fonts-style display-7"></th><th class="head-item mbr-fonts-style display-7"></th><th class="head-item mbr-fonts-style display-7"></th></tr>
-            </thead>
-
-            <tbody>
-              
-              
-              
-              
-            <tr> 
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Trial Test</td><td class="body-item mbr-fonts-style display-7">Test 1</td><td class="body-item mbr-fonts-style display-7">Test 2</td><td class="body-item mbr-fonts-style display-7">Test 3</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Test 4</td><td class="body-item mbr-fonts-style display-7">Test 5</td><td class="body-item mbr-fonts-style display-7">Test 6</td><td class="body-item mbr-fonts-style display-7">Test 7</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Test 8</td><td class="body-item mbr-fonts-style display-7">Test 9</td><td class="body-item mbr-fonts-style display-7">Test 10</td><td class="body-item mbr-fonts-style display-7"></td></tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="container table-info-container">
-          
-        </div>
+    <h2 class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5"><u>Opportunity Class</u></h2>
+    <p class="mbr-section-title mbr-fonts-style align-center pb-3 display-4">Opportunity classes, located in some government primary schools, cater for highly achieving Year 5 and Year 6 academically gifted students. These classes help gifted and talented students to learn by grouping them with other gifted and talented students and using specialised teaching methods and educational materials at the appropriate level.<br><br>The test consists of two parts, each of thirty minutes duration. Each part contains a mixture of English language, mathematics and general ability questions. The test will consist of multiple-choice questions with answers recorded on a computer-marked answer sheet.</p>
+    {% if user.is_authenticated %}
+      <div class="table-wrapper ">
+      <div class="container scroll">
+      <table class="table" cellspacing="0">
+      <thead>
+        <tr class="table-heads ">    
+          <th class="head-item mbr-fonts-style display-7">Subject</th>
+          <th class="head-item mbr-fonts-style display-7"></th>
+          <th class="head-item mbr-fonts-style display-7"></th>
+        </tr>
+      </thead>
+      <tbody>      
+      <tr> 
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">Maths (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">assay</a></td>
+      </tr>
+      <tr>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">English (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">assay</a></td>
+      </tr>
+      <tr>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">General Ability (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="#">assay</a></td>
+      </tr>
+      </tbody>
+      </table>
       </div>
     </div>
-</section>
-
-<section class="section-table cid-rAwLUuzF2C" id="table1-11">
-
-  <div class="container container-table">
-      
-      <h3 id='ga' class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5"><u>General Ability</u></h3>
-      <div class="table-wrapper">
-        <div class="container">
-          
-        </div>
-
-        <div class="container scroll">
-          <table class="table" cellspacing="0">
-            <thead>
-              <tr class="table-heads ">
-                  
-                  
-                  
-                  
-              <th class="head-item mbr-fonts-style display-7">Selective</th><th class="head-item mbr-fonts-style display-7"></th><th class="head-item mbr-fonts-style display-7"></th><th class="head-item mbr-fonts-style display-7"></th></tr>
-            </thead>
-
-            <tbody>
-              
-              
-              
-              
-            <tr> 
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Trial Test</td><td class="body-item mbr-fonts-style display-7">Test 1</td><td class="body-item mbr-fonts-style display-7">Test 2</td><td class="body-item mbr-fonts-style display-7">Test 3</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Test 4</td><td class="body-item mbr-fonts-style display-7">Test 5</td><td class="body-item mbr-fonts-style display-7">Test 6</td><td class="body-item mbr-fonts-style display-7">Test 7</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Test 8</td><td class="body-item mbr-fonts-style display-7">Test 9</td><td class="body-item mbr-fonts-style display-7">Test 10</td><td class="body-item mbr-fonts-style display-7"></td></tr>
-
-            </tbody>
-          </table>
-        </div>
-        <div class="container table-info-container">
-          
-        </div>
-      </div>
+    {% else %}
+    <div class="table-wrapper">
+    <div class="container scroll">
+    <table class="table" cellspacing="0">
+    <thead>
+    <tr class="table-heads ">    
+      <th class="head-item mbr-fonts-style display-7">Subject</th>
+      <th class="head-item mbr-fonts-style display-7"></th>
+      <th class="head-item mbr-fonts-style display-7"></th>
+    </tr>
+    </thead>
+    <tbody>      
+      <tr> 
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">Maths (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href ="{% url 'exam' %}?test=trial">trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black" href ="#">assay</a></td>
+      </tr>
+      <tr>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">English (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black" href ="#">assay</a></td>
+      </tr>
+      <tr>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black">General Ability (Under Development)</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-info" href =#>trial</a></td>
+        <td class="body-item mbr-fonts-style display-7"><a class="text-black" href ="#">assay</a></td>
+      </tr>
+    </tbody>
+    </table>
     </div>
+    </div>
+    {% endif %}
+  </div>
+  <br><br><br><br><br><br>
 </section>
+
 
 {% endblock %}
