@@ -4,3 +4,4 @@ infra
 integration/settings.py
 */migrations/*
 bkpdir/*
+media/qbank/*

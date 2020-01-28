@@ -1,6 +1,5 @@
 
 from django import forms
-from mainapp.models import Maths,English,GeneralA
 from django.utils.translation import gettext as _
 
 class ExamForm(forms.Form):

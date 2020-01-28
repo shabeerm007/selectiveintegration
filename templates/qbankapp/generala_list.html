@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="mbr-fullscreen form1 cid-rAw8bCJORZ" id="form1-y">    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-7">
+                    <u> General Ability Questions</u>
+                </h2>
+                    <div class="col-md-12 input-group-btn align-left">
+                        <ol>
+                        {% for que_elem in object_list %}
+	                        <li value="{{forloop.counter}}"> pk = {{que_elem.pk}}, &nbsp;&nbsp;
+	                        	{% if que_elem.context %}
+	                        		{{que_elem.context.slug}} 
+									{% if que_elem.context.image %}
+										<br>Image URL = {{que_elem.context.image.url}}
+									{% endif %}
+								{% endif %}
+	                        <p>{{ que_elem.que|escape|linebreaks }}</p>
+	                        <div> A:{{ que_elem.ch1 }} &nbsp;&nbsp;B:{{ que_elem.ch2 }} &nbsp;&nbsp;C:{{ que_elem.ch3 }} &nbsp;&nbsp; 
+	                        	  D:{{ que_elem.ch4 }} <br> Answer:{{que_elem.ans}} <br><br>
+	                        <p><u>Solution</u> <br>{{ que_elem.wor|escape|linebreaks }}<br>Validated : {{ que_elem.valid }}</p>
+	                        </div>
+	                        <br>
+	                        </li>
+	                    {% empty %}
+							<p> No Questions Yet </p>
+                        {% endfor %}
+                        </ol>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

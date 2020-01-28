@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="mbr-fullscreen form1 cid-rAw8bCJORZ" id="form1-y">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-7">
+                    <u>Question Context</u> 
+                </h2>
+                    <div class="col-md-12 input-group-btn align-left">
+                        <ol>
+                        {% for qcont in object_list %}
+	                        <li value="{{forloop.counter}}"><u>{{qcont.slug}},&nbsp;&nbsp;pk = {{qcont.pk}}</u>
+	                        <p> {{qcont.text}} <br></p>
+	                        {% if qcont.image %}
+                                {{qcont.image.path}}<br>
+                                {{qcont.image.url}}<br>
+	                        	<div><img src='{{qcont.image.url}}'></div>
+	                        {% endif %}
+						{% empty %}
+							<p> No Q context yet </p>
+                            </li>
+						{% endfor %}
+                        </ol>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

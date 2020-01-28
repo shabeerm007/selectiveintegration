@@ -1,5 +1,6 @@
 from django.shortcuts import  render,redirect
-from .models import Maths,English, GeneralA
+from .models import Maths, GeneralA
+from qbankapp.models_english import English
 from django.views.generic import TemplateView
 from .forms import ExamForm, ContactForm
 from django.core.mail import send_mail

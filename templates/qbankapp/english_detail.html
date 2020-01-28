@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="mbr-fullscreen form1 cid-rAw8bCJORZ" id="form1-y">    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-7">
+                    <u> English Questions</u>
+                </h2>
+                    <div class="col-md-12 input-group-btn align-left">
+                        <ol>
+	                        <li value="{{object.pk}}">
+	                        	{% if object.context %}
+	                        		{{object.context.slug}}
+	                        		<p>{{object.context.text}}</p>
+									{% if object.context.image %}
+										<div><img src="{{object.context.image.url}}"></div>
+									{% endif %}
+	                        	{% endif %}
+	                        <p>{{ object.que|escape|linebreaks }}</p>
+	                        <div> A:{{ object.ch1 }} &nbsp;&nbsp;B:{{ object.ch2 }} &nbsp;&nbsp;C:{{ object.ch3 }} &nbsp;&nbsp; 
+	                        	  D:{{ object.ch4 }} <br> Answer:{{object.ans}} <br><br>
+	                        <p><u>Solution</u> <br>{{ object.wor|escape|linebreaks }}<br>Validated : {{ object.valid }}</p>
+	                        </div>
+	                        <br>
+	                        </li>
+                        </ol>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

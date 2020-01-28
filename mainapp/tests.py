@@ -1,7 +1,8 @@
 from django.test import TestCase
 from selenium import webdriver
 
-from .models import Maths,English,GeneralA
+from .models import Maths,GeneralA
+from qbankapp.models_english import English
 
 class ModelTest(TestCase):
 	@classmethod

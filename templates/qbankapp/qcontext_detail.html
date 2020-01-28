@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="mbr-fullscreen form1 cid-rAw8bCJORZ" id="form1-y"> 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+				{% if object  %}
+					<h1 class="mbr-section-title align-left pb-3 mbr-fonts-style display-7"><u>{{object.slug}}</u></h1>
+					<p>{{object.text}}</p>
+					{% if object.image  %}
+						<p><img src='{{object.image.url}}'></p>
+					{% endif %}
+				{% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

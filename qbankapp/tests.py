@@ -1,5 +1,6 @@
 from django.test import TestCase, Client
-from mainapp.models import Maths, English, GeneralA
+from mainapp.models import Maths, GeneralA
+from .models_english import English
 
 
 class QbankMathsTestCase(TestCase):
