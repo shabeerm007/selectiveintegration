@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 psycopg2-binary = "*"
-django = "==2.2.8"
+django = "==2.2.22"
 pandas = "*"
 xlrd = "*"
 openpyxl = "*"
